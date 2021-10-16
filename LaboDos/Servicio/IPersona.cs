@@ -10,6 +10,6 @@ namespace LaboDos.Servicio
     {
         void Save(Persona c);
 
-        List<Persona> ListDataPersona();
+        List <Persona> ListDataPersona();
     }
 }
