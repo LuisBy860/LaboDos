@@ -16,7 +16,7 @@ namespace LaboDos.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
-
+            Console.WriteLine("Hola Mundo");
             return View();
         }
 
