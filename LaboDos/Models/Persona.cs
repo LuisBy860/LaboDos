@@ -11,10 +11,12 @@ namespace LaboDos.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Persona
     {
         public int IdPersona { get; set; }
+        public string Nombre { get; set; }
         public string NombrePersona { get; set; }
         public Nullable<int> EdadPersona { get; set; }
         public string DescripcionPersona { get; set; }
