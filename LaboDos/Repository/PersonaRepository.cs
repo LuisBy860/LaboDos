@@ -9,13 +9,22 @@ namespace LaboDos.Repository
 {
     public class PersonaRepository : IPersona
     {
+        AlmacenPersonaEntities bd = new AlmacenPersonaEntities();
+
         public void Save(Persona c)
         {
-            throw new NotImplementedException();
+            bd.Persona.Add(c);
+            bd.SaveChanges();
+
+
+
         }
         public List<Persona> ListDataPersona()
         {
-            throw new NotImplementedException();
+
+            var ListofDataOfPersona = bd.Persona.ToList();
+
+            return ListofDataOfPersona;
         }
     }
 }
