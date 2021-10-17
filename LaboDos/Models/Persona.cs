@@ -16,9 +16,17 @@ namespace LaboDos.Models
     public partial class Persona
     {
         public int IdPersona { get; set; }
-        public string Nombre { get; set; }
+
+        [Display(Name = "NombrePersona ")]
+        [Required(ErrorMessage = "estos campos son requeridos")]
         public string NombrePersona { get; set; }
+
+        [Display(Name = "Edad")]
+        [Required(ErrorMessage = "estos campos son requeridos")]
         public Nullable<int> EdadPersona { get; set; }
+
+        [Display(Name = "DescripcionPersona ")]
+        [Required(ErrorMessage = "estos campos son requeridos")]
         public string DescripcionPersona { get; set; }
     }
 }

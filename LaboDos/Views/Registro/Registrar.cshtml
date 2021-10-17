@@ -1,0 +1,33 @@
+﻿@model  LaboDos.Models.Persona
+@{
+    ViewBag.Title = "Registrar";
+}
+
+<h2>Registrar</h2>
+
+@using (Html.BeginForm("Registros", "Registro", FormMethod.Post))
+{
+    @Html.LabelFor(m => m.NombrePersona )
+    <br />
+    @Html.TextBoxFor(m => m.NombrePersona)
+    <br />
+    @Html.ValidationMessageFor(m => m.NombrePersona, null)
+    <br />
+    @Html.LabelFor(m => m.EdadPersona);
+    <br />
+    @Html.TextBoxFor(m => m.EdadPersona, new { type = "number" });
+    <br />
+    @Html.ValidationMessageFor(m => m.EdadPersona, null)
+    <br />
+    @Html.LabelFor(m => m.DescripcionPersona);
+    <br />
+    @Html.TextBoxFor(m => m.DescripcionPersona);
+    <br />
+    @Html.ValidationMessageFor(m => m.DescripcionPersona, null)
+    <br />
+    <input type="submit" />
+}
+
+
+
+

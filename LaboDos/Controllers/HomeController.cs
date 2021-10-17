@@ -13,16 +13,18 @@ namespace LaboDos.Controllers
         public ActionResult Index()
         {
 
-            //Persona persona = new Persona();
-            PersonaRepository personaRepository = new PersonaRepository();
-            //persona.NombrePersona = "Progra apli 1";
-            //persona.EdadPersona = 15;
-            //persona.DescripcionPersona = "persona adulta altura promedio";
-            //personaRepository.Save(persona);
+            // //Persona persona = new Persona();
+            // PersonaRepository personaRepository = new PersonaRepository();
+            // //persona.NombrePersona = "Progra apli 1";
+            // //persona.EdadPersona = 15;
+            // //persona.DescripcionPersona = "persona adulta altura promedio";
+            // //personaRepository.Save(persona);
 
-           var  ListOfData = personaRepository.ListDataPersona();
+            //var  ListOfData = personaRepository.ListDataPersona();
 
-            return View(ListOfData); //razor page nos adactara
+            // return View(ListOfData); //razor page nos adactara
+
+            return View();
         }
 
         public ActionResult About()
