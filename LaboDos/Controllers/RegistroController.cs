@@ -32,9 +32,7 @@ namespace LaboDos.Controllers
         {
           
             if (ModelState.IsValid)
-            {
-               
-              
+            {   
                 return View("Registrar",personas);
             }
            else 
@@ -44,8 +42,6 @@ namespace LaboDos.Controllers
         }
         public ActionResult Registro ()
         {
-
-
             return View ();
         }
 
@@ -53,19 +49,11 @@ namespace LaboDos.Controllers
         {           
             PersonaRepository personaRepository = new PersonaRepository();
 
-        
-
             personaRepository.Save(personas);
 
             var ListOfData = personaRepository.ListDataPersona();
 
             return View(ListOfData); //razor page nos adactara
-
-        }
-
-
-
-
-            
+        }       
     }
 }
