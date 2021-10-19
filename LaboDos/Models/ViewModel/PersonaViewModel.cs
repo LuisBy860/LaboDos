@@ -10,7 +10,7 @@ namespace LaboDos.Models.ViewModel
     {
         public int IdPersona { get; set; }
 
-        [Display(Name = "NombrePersona ")]
+        [Display(Name = "Nombre ")]
         [Required(ErrorMessage = "estos campos son requeridos")]
         public string NombrePersona { get; set; }
 
@@ -18,7 +18,7 @@ namespace LaboDos.Models.ViewModel
         [Required(ErrorMessage = "estos campos son requeridos")]
         public Nullable<int> EdadPersona { get; set; }
 
-        [Display(Name = "DescripcionPersona ")]
+        [Display(Name = "Descripcion ")]
         [Required(ErrorMessage = "estos campos son requeridos")]
         public string DescripcionPersona { get; set; }
     }

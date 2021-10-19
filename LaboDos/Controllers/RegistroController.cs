@@ -1,4 +1,5 @@
 ﻿using LaboDos.Models;
+using LaboDos.Models.ViewModel;
 using LaboDos.Repository;
 using System;
 using System.Collections.Generic;
@@ -27,28 +28,16 @@ namespace LaboDos.Controllers
 
 
         }
-        public ActionResult Registrars(Persona personas)
+        public ActionResult Registrars(PersonaViewModel personas)
         {
           
             if (ModelState.IsValid)
             {
-                PersonaRepository personaRepository = new PersonaRepository();
-
-
-
-                using (AlmacenPersonaEntities db =new AlmacenPersonaEntities())
-                {
-                    var persona = new Persona();
-                    persona.NombrePersona = persona.NombrePersona;
-                    persona.EdadPersona = persona.EdadPersona;
-                    persona.DescripcionPersona = persona.DescripcionPersona;
-
-
-                }
-
-                return View("Registrar");
+               
+              
+                return View("Registrar",personas);
             }
-            else
+           else 
                 return View("Registros");
              
 
@@ -61,12 +50,10 @@ namespace LaboDos.Controllers
         }
 
         public ActionResult Registros(Persona personas)
-        {            //Persona persona = new Persona();
+        {           
             PersonaRepository personaRepository = new PersonaRepository();
 
-            //persona.NombrePersona = "Progra apli 1";
-            //persona.EdadPersona = 15;
-            //persona.DescripcionPersona = "persona adulta altura promedio";
+        
 
             personaRepository.Save(personas);
 

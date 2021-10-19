@@ -5,46 +5,61 @@
 
 <h2>Registros</h2>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body>
 
-<div class="row">
-    <div class="container">
-        <table class="table table-hover" id="tabladeregistros">
-            <thead>
-            <th>
-                IdPersona
-            </th>
-            <th>
-                Nombre
-            </th>
-            <th>
-                Edad
-            </th>
-            <th>
-                Descripcion
-            </th>
+    <div class="row">
+        <div class="container">
+            <div class="animate__animated animate__fadeInDown">
+                <table class="table table-hover" id="tabladeregistros">
+                    <thead>
+                    <th>
+                        IdPersona
+                    </th>
+                    <th>
+                        Nombre
+                    </th>
+                    <th>
+                        Edad
+                    </th>
+                    <th>
+                        Descripcion
+                    </th>
 
-            </thead>
-            <tbody>
+                    </thead>
+                    <tbody>
 
-                @foreach (var item in Model)
-                {
+                        @foreach (var item in Model)
+                        {
 
-                    <tr>
+                            <tr>
 
-                        <td>@item.IdPersona </td>
-                        <td>@item.NombrePersona </td>
-                        <td>@item.EdadPersona </td>
-                        <td>@item.DescripcionPersona </td>
+                                <td>@item.IdPersona </td>
+                                <td>@item.NombrePersona </td>
+                                <td>@item.EdadPersona </td>
+                                <td>@item.DescripcionPersona </td>
 
-                    </tr>
-
-
-                }
+                            </tr>
 
 
-            </tbody>
+                        }
+
+
+                    </tbody>
 
 
 
-        </table>
+                </table>
+            </div>
+        </div>
     </div>
+</body>
+</html>
