@@ -30,13 +30,27 @@ namespace LaboDos.Controllers
         public ActionResult Registrars(Persona personas)
         {
           
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                return View("Registrar", personas);
+                PersonaRepository personaRepository = new PersonaRepository();
+
+
+
+                using (AlmacenPersonaEntities db =new AlmacenPersonaEntities())
+                {
+                    var persona = new Persona();
+                    persona.NombrePersona = persona.NombrePersona;
+                    persona.EdadPersona = persona.EdadPersona;
+                    persona.DescripcionPersona = persona.DescripcionPersona;
+
+
+                }
+
+                return View("Registrar");
             }
             else
-                return View("ExitoViewModel");
-
+                return View("Registros");
+             
 
         }
         public ActionResult Registro ()
@@ -46,9 +60,10 @@ namespace LaboDos.Controllers
             return View ();
         }
 
-        public ActionResult Registros(Persona personass)
+        public ActionResult Registros(Persona personas)
         {            //Persona persona = new Persona();
             PersonaRepository personaRepository = new PersonaRepository();
+          
             //persona.NombrePersona = "Progra apli 1";
             //persona.EdadPersona = 15;
             //persona.DescripcionPersona = "persona adulta altura promedio";
@@ -57,6 +72,7 @@ namespace LaboDos.Controllers
             var ListOfData = personaRepository.ListDataPersona();
 
             return View(ListOfData); //razor page nos adactara
+
         }
 
 

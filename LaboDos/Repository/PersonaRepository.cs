@@ -25,5 +25,7 @@ namespace LaboDos.Repository
 
             return ListOfDataOfPersona;
         }
+
+        
     }
 }

@@ -152,6 +152,7 @@
     <Compile Include="Models\sysdiagrams.cs">
       <DependentUpon>AlmacenPersona.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModel\PersonaViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\PersonaRepository.cs" />
     <Compile Include="Servicio\IPersona.cs" />
