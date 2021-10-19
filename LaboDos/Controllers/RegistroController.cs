@@ -63,11 +63,12 @@ namespace LaboDos.Controllers
         public ActionResult Registros(Persona personas)
         {            //Persona persona = new Persona();
             PersonaRepository personaRepository = new PersonaRepository();
-          
+
             //persona.NombrePersona = "Progra apli 1";
             //persona.EdadPersona = 15;
             //persona.DescripcionPersona = "persona adulta altura promedio";
-            //personaRepository.Save(persona);
+
+            personaRepository.Save(personas);
 
             var ListOfData = personaRepository.ListDataPersona();
 
